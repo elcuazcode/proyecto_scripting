@@ -1,0 +1,6 @@
+Reporte Diario de Facturación
+-----------------------------------
+Total de correos procesados: 19
+Correos exitosos: 0
+Correos fallidos: 19
+-----------------------------------

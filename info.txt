@@ -1,0 +1,33 @@
+## Estamos en un entorno virtual
+source venv/bin/activate  // para inciar el entorno
+deactivate                // desactivar el entorno
+
+
+## Que instale en el entorno virtual
+
+pip install faker
+
+## Esto se instalo en todo el sistema
+latex
+
+
+## Generar los datos
+python generador_compras.py
+
+
+## hay archivos que deben de darles permisos para ejecutarse
+chmod +x scripts/generador_facturas.sh
+./scripts/generador_facturas.sh
+
+##  Darle permisos antes de ejecutarlo
+chmod +x scripts/enviador.py
+python scripts/enviador.py
+
+## AGREGAR VARIABLES DE ENTORNO PARA OCULTAR LA INFO
+## MEJORAR ESTETICAMENTE EL PDF PARA QUE SEA MAS PERSONALIZADO
+## CREAR EL ARCHIVO REQUIRIMENTS
+
+
+
+## DARLE PERMISOS DE EJECUCION A ESTE ARCHIVO
+chmod +x scripts/generar_reporte.sh

@@ -1,0 +1,83 @@
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{color}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textbf{Factura \#d7ae8ccd-9214-4a8c-953b-c07cb1187702}}
+\lhead{Mercado IRSI}
+\rfoot{Página \thepage\ de \pageref{LastPage}}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+
+\definecolor{lightgray}{gray}{0.9}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+
+\begin{center}
+    \Huge \textbf{Factura Electrónica}
+
+    \vspace{0.3cm}
+    \large \textbf{Mercado IRSI - Sistema Automatizado}
+
+    \vspace{0.5cm}
+    \normalsize Fecha de Emisión: \textbf{2025-07-18} \\
+    ID de Transacción: \textbf{d7ae8ccd-9214-4a8c-953b-c07cb1187702} \\
+\end{center}
+
+\vspace{1cm}
+
+\section*{Información del Cliente}
+\begin{tabularx}{\textwidth}{L{4cm} L{12cm}}
+\rowcolor{lightgray}
+\textbf{Campo} & \textbf{Valor} \\
+\hline
+Nombre completo & Grace Bartlett \\
+Correo electrónico & coryschmidt@example.com \\
+Teléfono & (769)987-9361x295 \\
+Dirección & 033 Joe Roads, Bakerland, PR 68976 \\
+Ciudad & Gravesmouth \\
+\end{tabularx}
+
+\vspace{0.8cm}
+
+\section*{Detalles de la Compra}
+\begin{tabularx}{\textwidth}{L{6cm} L{10cm}}
+\rowcolor{lightgray}
+\textbf{Concepto} & \textbf{Detalle} \\
+\hline
+Cantidad comprada & 4 \\
+Monto total & ₡443.69 \\
+Tipo de pago & completo \\
+Estado del pago & fallido \\
+IP de compra & 162.85.132.24 \\
+Fecha y hora & 2025-07-18 22:34:05 \\
+\end{tabularx}
+
+\vspace{1.5cm}
+
+\section*{Observaciones}
+promoción aplicada
+
+\vfill
+
+\begin{center}
+    \textit{Gracias por su compra.} \\
+    Mercado IRSI - www.mercadoirsi.com \\
+    Factura generada automáticamente por el sistema.
+\end{center}
+
+\end{document}
