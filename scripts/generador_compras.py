@@ -2,9 +2,14 @@ from faker import Faker
 import csv
 import random
 from datetime import datetime
+import os
+from dotenv import load_dotenv
 
 # Inicializar Faker
 fake = Faker()
+
+# Cargar variables de entorno
+load_dotenv()
 
 # Función para generar una transacción comercial simulada
 def generar_compra():
@@ -14,7 +19,7 @@ def generar_compra():
         "nombre": fake.name(),  # Nombre del cliente
         "correo": fake.email(),  # Correo electrónico
         "telefono": fake.phone_number(),  # Teléfono
-        "direccion": fake.address().replace("\n", ", "),  # Dirección física
+        "direccion": fake.country(),  # Dirección física
         "ciudad": fake.city(),  # Ciudad
         "cantidad": random.randint(1, 10),  # Cantidad de productos comprados
         "monto": round(random.uniform(100, 1000), 2),  # Monto total en colones
@@ -27,8 +32,11 @@ def generar_compra():
 
 # Función principal
 def main():
-    # Definir el archivo CSV donde se guardarán los datos
-    archivo_csv = "data/compras.csv"
+    # Definir el archivo CSV donde se guardarán los datos usando variable de entorno
+    archivo_csv = os.getenv("COMPRAS_CSV", "data/compras.csv")
+    
+    # Crear directorio si no existe
+    os.makedirs(os.path.dirname(archivo_csv), exist_ok=True)
     
     # Escribir los datos en el archivo CSV
     with open(archivo_csv, "w", newline="", encoding="utf-8") as file:

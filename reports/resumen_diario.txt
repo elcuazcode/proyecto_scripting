@@ -1,6 +1,10 @@
 Reporte Diario de Facturación
+Generado: 2025-07-21 21:10:37
 -----------------------------------
-Total de correos procesados: 19
-Correos exitosos: 0
-Correos fallidos: 19
+Total de correos procesados: 10
+Correos exitosos: 10
+Correos fallidos: 0
+-----------------------------------
+Total vendido: ₡3632.10
+Pedidos pagados completamente: 2
 -----------------------------------

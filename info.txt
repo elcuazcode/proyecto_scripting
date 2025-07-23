@@ -31,3 +31,49 @@ python scripts/enviador.py
 
 ## DARLE PERMISOS DE EJECUCION A ESTE ARCHIVO
 chmod +x scripts/generar_reporte.sh
+
+
+## IMPORTANTE
+EL REPORTE SE GENERA DESPUES DE ENVIAR LOS CORREOS
+DESPUES SE ENVIA ESE REPORTE AL ADMINISTRADOR AHI ES DONDE SE USA CRON
+
+
+
+
+
+
+## PARA PODER EJECUTAR GENERADOR DEBO ESTAR EN LA RAIZ
+## LUEGO EJECUTO EL SCRIPT
+cd /home/elcuazcode/proyecto_scripting
+python scripts/generador_compras.py
+
+
+
+
+
+
+# Generar facturas a las 17:35 PM todos los días
+35 17 * * * /home/elcuazcode/proyecto_scripting/scripts/run_generador.sh >> /home/elcuazcode/proyecto_scripting/logs/cron.log 2>&1
+
+# Enviar facturas y reporte a las 17:37 PM todos los días
+37 17 * * * /home/elcuazcode/proyecto_scripting/scripts/run_enviador.sh >> /home/elcuazcode/proyecto_scripting/logs/cron.log 2>&1
+
+
+
+
+
+
+
+
+
+
+## PARA LAS PRUEBAS
+EN EL ARCHIVO QUE GENERA COMPRAS NO DEBE DE IR CARACTERES ESPECIALES, PORQUE ESO GENERA 
+ERRORES
+
+
+
+admemployee01@gmail.com
+nhpu vrne dzfm tqud
+
+haylspotify01@gmail.com 

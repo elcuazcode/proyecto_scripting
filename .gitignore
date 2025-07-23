@@ -1,0 +1,67 @@
+# Archivos de entorno con información sensible
+.env
+
+# Archivos generados (pero mantener los directorios)
+output/*
+!output/.gitkeep
+logs/*
+!logs/.gitkeep
+data/*
+!data/.gitkeep
+reports/*
+!reports/.gitkeep
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Entorno virtual
+venv/
+env/
+ENV/
+
+# Archivos de LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDEs
+.vscode/
+.idea/
+
+# Archivos de configuración local
+config.local.*
+
+# Archivos temporales de info
+info.txt

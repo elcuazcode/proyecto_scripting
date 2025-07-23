@@ -1,11 +1,16 @@
 #!/bin/bash
 
-# Definir rutas de archivos
-INPUT_CSV="data/compras.csv"         # Ruta al archivo CSV de compras
-TEMPLATE_TEX="templates/plantilla_factura.tex"  # Plantilla LaTeX
-OUTPUT_DIR="output"                  # Carpeta para guardar las facturas PDF
-LOG_FILE="logs/log_diario.log"       # Log centralizado
-PENDIENTES_ENVIO="data/pendientes_envio.csv"  # Archivo de pendientes de envío
+# Cargar variables de entorno desde .env si existe
+if [ -f .env ]; then
+    export $(grep -v '^#' .env | xargs)
+fi
+
+# Definir rutas de archivos usando variables de entorno con valores por defecto
+INPUT_CSV="${COMPRAS_CSV:-data/compras.csv}"
+TEMPLATE_TEX="${TEMPLATE_TEX:-templates/plantilla_factura.tex}"
+OUTPUT_DIR="${OUTPUT_DIR:-output}"
+LOG_FILE="${LOG_FILE:-logs/log_diario.log}"
+PENDIENTES_ENVIO="${PENDIENTES_ENVIO:-data/pendientes_envio.csv}"
 
 # Crear carpetas si no existen
 mkdir -p "$OUTPUT_DIR"
