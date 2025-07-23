@@ -23,7 +23,7 @@ Sistema completo de facturación electrónica que genera datos simulados, crea f
 
 1. Clonar el repositorio:
 ```bash
-git clone <tu-repositorio>
+git clone https://github.com/elcuazcode/proyecto_scripting.git
 cd proyecto_scripting
 ```
 
@@ -76,11 +76,11 @@ python scripts/enviador.py
 
 Agregar al crontab:
 ```bash
-# Generar facturas a las 17:35 PM todos los días
-35 17 * * * /ruta/completa/scripts/run_generador.sh >> /ruta/completa/logs/cron.log 2>&1
+# Generar facturas a las 17:00 PM todos los días
+00 17 * * * /ruta/completa/scripts/run_generador.sh >> /ruta/completa/logs/cron.log 2>&1
 
-# Enviar facturas y reporte a las 17:37 PM todos los días
-37 17 * * * /ruta/completa/scripts/run_enviador.sh >> /ruta/completa/logs/cron.log 2>&1
+# Enviar facturas y reporte a las 18:00 PM todos los días
+00 18 * * * /ruta/completa/scripts/run_enviador.sh >> /ruta/completa/logs/cron.log 2>&1
 ```
 
 ## Estructura del Proyecto
